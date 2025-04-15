@@ -1,0 +1,19 @@
+.todoitem {
+    display: "flex";
+    justify-content: "space-between";
+    padding: "10px";
+    border-bottom: "1px solid #ddd";
+}
+
+p  {
+    display: inline ;
+    margin: 20px;
+
+}
+
+button {
+margin-left: "10px";
+cursor: "pointer"; 
+color: white;
+background-color: red;  
+}

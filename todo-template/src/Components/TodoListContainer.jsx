@@ -11,11 +11,16 @@ const TodoListContainer = () => {
         if (input.trim() === "") return;
         setTodolist([...todolist, { id: Date.now(), text: input }]);
         setInput("");
-    }
+    };
+
+    const deleteTodo = (id) => {
+        console.log('entering the delete function..');
+        setTodolist(todolist.filter(todo => todo.id !== id));
+    };
 
     return (
         <>
-        <div className='todolistcontainer'>
+        <div className="todolistcontainer">
         <h1>TODO List</h1>
         <input className="todoinput" 
         type='text' 
@@ -29,7 +34,7 @@ const TodoListContainer = () => {
         <br />
         {   todolist.length === 0 ? <p>No Tasks available!</p> : 
             todolist.map(todo => (
-                <TodoItem key={todo.id} task={todo.text} />
+                <TodoItem key={todo.id} task={todo} onDelete= {deleteTodo}/>
             ))
         }
         

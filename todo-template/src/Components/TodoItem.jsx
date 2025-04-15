@@ -1,9 +1,13 @@
-const TodoItem = ({ task }) => {
+import '../style/todoitem.css';
+
+const TodoItem = ({ task, onDelete }) => {
    
-     return(
+     return (
         <>
-       <p> {task}</p>
-        
+        <div className="todoitem">
+        <button onClick={() => onDelete(task.id)}>X</button>
+       <p> {task.text}</p>
+       </div>
         </>
      )
 }
