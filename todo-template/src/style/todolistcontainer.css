@@ -1,0 +1,21 @@
+.todolistcontainer {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 70vw;
+
+}
+
+.todoinput{
+padding: 5px;
+min-height: 50px;
+margin-bottom: 5px;
+
+}
+
+.todobutton {
+    width:50%;
+    height:30px;
+    background-color: aliceblue ;
+}
